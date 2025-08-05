@@ -59,6 +59,7 @@ const AddEmployee = () => {
 
 
   return (
+    <>
     <div className="container">
       <h1>{id ? "Update Employee" : "Add New Employee"}</h1>
       <hr/>
@@ -100,6 +101,8 @@ const AddEmployee = () => {
       <hr/>
       <Link to="/">Back to List</Link>
     </div>
+    </>
+
 
   )
 }
