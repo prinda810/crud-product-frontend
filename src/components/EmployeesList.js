@@ -54,6 +54,7 @@ const EmployeesList = () => {
               <span className="sr-only">Loading...</span>
             </div>
             <p className="mt-2">Loading employees...</p>
+            <p className="mt-1">If loading takes too long, please refresh the page.</p>
           </div>
         ) : error ? (
           <div className="alert alert-danger text-center">{error}</div>
