@@ -3,6 +3,7 @@ import { Link, useNavigate} from "react-router"
 import employeeService from "../services/employee.service";
 import { useParams } from "react-router";
 
+
 const AddEmployee = () => {
     const [name, setName] = useState('');
     const [department, setDepartment] = useState('');
@@ -24,7 +25,7 @@ const AddEmployee = () => {
             employeeService.update(employee)
             .then(response => {
                 console.log("Employee data updated sucessfully", response.data);
-                navigate('/');
+                navigate('/employees');
             }).catch(error =>{
                 console.log("Something went wrong to update the employee details",error)
             });
@@ -34,7 +35,7 @@ const AddEmployee = () => {
             employeeService.create(employee)
         .then(response =>{
             console.log("Employee data added successfully", response.data);
-            navigate('/');
+            navigate('/employees');
         })
         .catch(error =>{
             console.log("Something went wrong to add employee", error);
@@ -99,7 +100,7 @@ const AddEmployee = () => {
         </div>
       </form>
       <hr/>
-      <Link to="/">Back to List</Link>
+      <Link to="/employees">Back to List</Link>
     </div>
     </>
 

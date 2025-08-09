@@ -87,8 +87,8 @@ const EmployeesList = () => {
                       <td>{employee.department}</td>
                       <td>{employee.location}</td>
                       <td>
-                        <Link className="btn btn-info mr-2" to={`/employees/edit/${employee.id}`}>Update</Link>
-                        <button className="btn btn-danger" onClick={() => handleDelete(employee.id)}>Delete</button>
+                        <Link className="btn btn-info mr-2" to={`/employees/edit/${employee.id}`}><i class='bx bx-edit-alt'></i></Link>
+                        <button className="btn btn-danger" onClick={() => handleDelete(employee.id)}><i class='bx bx-trash' ></i></button>
                       </td>
                     </tr>
                   ))
